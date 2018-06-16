@@ -1,12 +1,15 @@
 from selenium import webdriver
-from  selenium.webdriver.support.ui import  WebDriverWait
-import sys
-sys.path.insert(0,'/home/sudhanshu/Github')
-from My_Config import my_email, my_pass
+from  selenium.webdriver.support.ui import WebDriverWait
 import unittest
 import pickle #for my personal email Database
 
-__BATCH_SIZE = 500
+# For Importing my credentials
+import sys
+sys.path.insert(0,'/home/sudhanshu/Github')
+from My_Config import my_email, my_pass
+
+# Invitaion batch size
+__BATCH_SIZE = 900
 
 class ClearTax(unittest.TestCase):
     def setUp(self):
