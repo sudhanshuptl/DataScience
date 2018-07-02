@@ -78,9 +78,9 @@ print(comm_cols)
 # In[10]:
 
 
-train_p12 = pd.merge(train_p1,train_p2,how='inner',                     left_on = ['building_id','district_id','vdcmun_id'],                     right_on = ['building_id','district_id','vdcmun_id'])
+train_p12 = pd.merge(train_p1,train_p2,how='inner',  left_on = ['building_id','district_id','vdcmun_id'],  right_on = ['building_id','district_id','vdcmun_id'])
 
-test = pd.merge(test,train_p2,how='inner',                     left_on = ['building_id','district_id','vdcmun_id'],                     right_on = ['building_id','district_id','vdcmun_id'])
+test = pd.merge(test, train_p2, how='inner',   left_on = ['building_id','district_id','vdcmun_id'],    right_on = ['building_id','district_id','vdcmun_id'])
 
 
 # In[11]:
@@ -918,14 +918,7 @@ clsf
 clsf.fit(train_x,train_y)
 
 
-# In[ ]:
+from sklearn.externals import joblib
+joblib.dump(clsf, 'filename.pkl')
 
-
-train_x[0]
-
-
-# In[78]:
-
-
-490
-
+print('Hii I am DOne')
